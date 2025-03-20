@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/service/products.service';
+import { ProductActionTypes } from 'src/app/state/product.state';
 
 @Component({
   selector: 'app-products-add',
@@ -12,8 +14,8 @@ export class ProductsAddComponent implements OnInit {
 
   productFormGroup?:FormGroup ;
   submitted:boolean = false ;
-
-constructor(private fb:FormBuilder, private productService:ProductService){}
+constructor(private fb:FormBuilder, private productService:ProductService,
+   private router: Router ){}
 
 ngOnInit(): void {
 //price valeur par defaut 0
@@ -34,6 +36,7 @@ onSaveProduct() {
   this.productService.save(this.productFormGroup?.value)
   .subscribe(data => {
      alert("save avec success projet")
+     this.router.navigate(['/products']);
   });
 }
 

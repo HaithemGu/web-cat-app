@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
   OnGetAllProducts(){
    this.products$=this.productService.getAllProducts().pipe(
     map(data=>{
-      console.log(data); 
+      console.log(data);
       return ({dataState:DataStateEnum.LOADED,data:data})
     }),
     startWith({dataState:DataStateEnum.LOADING}),

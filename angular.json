@@ -26,11 +26,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "C:/Users/DELL/Desktop/workspace/web-cat-app/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "C:/Users/DELL/Desktop/workspace/web-cat-app/node_modules/jquery/dist/jquery.min.js",
-              "C:/Users/DELL/Desktop/workspace/web-cat-app/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
